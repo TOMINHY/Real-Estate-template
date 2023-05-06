@@ -600,16 +600,12 @@ input,
   color: #F85A47;
 }
 
-.\!item.active.\!item:before{
+.\!item.active:before{
   width: 100% !important;
 }
 
-.item.active.item:before{
+.item.active:before{
   width: 100%;
-}
-
-.\!item.active.\!item:before{
-  width: 100% !important;
 }
 
 .\!item:hover .\!item:before{
@@ -1078,6 +1074,10 @@ input,
 
 .transform-none {
   transform: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .touch-auto {
