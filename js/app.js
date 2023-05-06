@@ -1,7 +1,5 @@
 window.addEventListener("load", function() {
   const menuToggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".menu-fixed");
-  const items = document.querySelectorAll(".item");
   menuToggle && menuToggle.addEventListener("click", handleToggleMenu);
   function handleToggleMenu(e) {
     menu && menu.classList.add("active");
@@ -13,11 +11,14 @@ window.addEventListener("load", function() {
     }
     menu && menu.classList.remove("active");
   }
-  items.forEach(function(item,index) {
+});
+
+const menu = document.querySelector(".menu-fixed");
+const items = document.querySelectorAll(".item");
+items.forEach(function(item,index) {
     item.onclick= function() {
       const itemActive = document.querySelector(".item.active");
       itemActive.classList.remove("active");
       this.classList.add("active");
     }
-  })
 })
